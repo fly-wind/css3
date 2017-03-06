@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<title>动画例子</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<style type="text/css">
+	html, body, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, fieldset, input, abbr, article, aside, command, details, figcaption, figure, footer, header, hgroup, mark, meter, nav, output, progress, section, summary, time, td{padding: 0; margin: 0;}
+	html{ font-size: 75px;}
+	body{margin: 0; padding: 0; font-size: 12px;}
+	body{background-color: #ffd334;}
+	header{ max-width: 750px; margin: 0 auto; position: relative;}
+	img{max-width: 100%;}
+	/*iphone5*/
+	@media screen and (max-width:320px){ html{font-size:32px !important;} }
+	/*iphone6*/
+	@media screen and (min-width: 375px) and (max-width:750px){ html{font-size:37.6px !important;} }
+	/*其他*/
+	@media screen and (max-width:750px){ html{font-size:36px;} }
+	@-webkit-keyframes up 
+	{
+		100% {
+    		transform: translateY(0.26666667rem);
+		}
+	}
+	@-webkit-keyframes toscale 
+	{
+		100% {
+    		transform: scale(1);
+		}
+	}
+	@-webkit-keyframes down 
+	{
+		10%,30% {
+    		transform: translateY(0);
+		}
+		90% {
+    		transform: translateY(-0.43rem);
+		}
+	}
+	.running1{
+		position: absolute;
+		background: url('images/run.png');
+		width: 4rem;
+	    height: 4rem;
+	    top: 5.8rem;
+    	left: 1.7rem;
+		background-size: 6.66rem 4.5rem;
+	    background-position: 0 0;
+	    background-repeat: no-repeat;
+	    -webkit-animation: up ease-in-out  1.5s alternate infinite;
+	}
+	.mask{
+		position: absolute;
+		background: url('images/run.png');
+		width: 2.5rem;
+	    height: 0.5rem;
+	    top: 10rem;
+	    left: 2.1rem;
+	    background-size: 6.66rem 4.5rem;
+	    background-position: -0.3rem -4rem;
+	    background-repeat: no-repeat;
+	    transform: scale(0.5);
+	    -webkit-animation: toscale ease-in-out  1.5s alternate infinite;
+	}
+	.running2{
+		position: absolute;
+		background: url('images/run.png');
+		width: 2.5rem;
+	    height: 2rem;
+	    top: 6.3rem;
+    	left: 6.5rem;
+		background-size: 6.66rem 4.5rem;
+	    background-position: -4.3rem 0;
+	    background-repeat: no-repeat;
+	    -webkit-animation: down ease-in-out  3s  infinite;
+	}
+	.shoes{
+		position: absolute;
+		background: url('images/shoesbg.png');
+		width: 3.46rem;
+	    height: 2.3rem;
+		top: 6.57rem;
+    	left: 5.8rem;
+    	background-repeat: no-repeat;
+    	background-size: 100%;
+    	z-index: 999;
+	}
+
+</style>
+</head>
+<body>
+    <header>
+    	<img src="images/top.jpg" alt=""/>
+		<img src="images/top2.jpg" alt=""/>
+		<div class="running1"></div>
+		<div class="mask"></div>
+		<div class="running2"></div>
+		<div class="shoes"></div>
+    </header>
+</body>
+</html>
